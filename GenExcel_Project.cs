@@ -34,6 +34,7 @@ namespace GenExcel
             Excel.Workbook NewWorkBook;
             Excel.Worksheet NewWorkSheet;
             Excel.Worksheet OrgWorkSheet;
+            
             Excel.Range xlCell;
             Excel.Range oRange;
             Excel.Range Data;
@@ -56,9 +57,9 @@ namespace GenExcel
             String Old_Building = "none";
             String Old_Level = "none";
             String Old_Zone = "none";
-            String[] Title = new String[9];
             String mData;
             String IMG_ID;
+            String[] Title = new String[9];
 
 
 
@@ -74,13 +75,13 @@ namespace GenExcel
             otherData.RowHeight = 220;
 
             //Set global attributes
-            NewWorkExcel.StandardFont = "Gulim";
+            NewWorkExcel.StandardFont = "Gulim";                                                                    //This line is set up the Font
             WholeCell.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
             RowCount = OrgWorkSheet.UsedRange.Rows.Count;                                                           //Get the total row of the excel
             ColCount = OrgWorkSheet.UsedRange.Columns.Count;
             //System.Diagnostics.Debug.Print(Convert.ToString(RowCount));
-
+            // PreSet the 
             Title[0] = "Sign ID";
             Title[1] = "Side A Type_ID";
             Title[2] = "Side B Type_ID";
